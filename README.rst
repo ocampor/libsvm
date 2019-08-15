@@ -1,3 +1,6 @@
+.. image:: https://travis-ci.com/ocampor/libsvm.svg?branch=master
+    :target: https://travis-ci.com/ocampor/libsvm
+
 LibSVM
 ======
 
