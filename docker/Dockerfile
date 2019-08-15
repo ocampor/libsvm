@@ -1,4 +1,4 @@
-FROM python:3.6-slim
+FROM python:3.4-slim
 
 RUN apt-get update -y && apt-get install -y g++
 

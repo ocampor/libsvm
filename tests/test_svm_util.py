@@ -14,7 +14,7 @@ def heart_scale():
 
 def test_heart_scale_correctly_loaded(heart_scale):
     y, x = heart_scale
-    expected_x: dict = {
+    expected_x = {
         1: 0.708333,
         2: 1,
         3: 1,
