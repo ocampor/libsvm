@@ -4,7 +4,7 @@ from distutils.extension import Extension
 
 import libsvm
 
-DESCRIPTION = 'Python package for libsvm package'
+DESCRIPTION = 'Pre-built LibSVM packages for Python.'
 LICENSE = 'Apache 2.0'
 DIST_NAME = 'libsvm'
 ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -23,12 +23,10 @@ setup(
     version=VERSION,
     license=LICENSE,
     description=DESCRIPTION,
+    long_description=open(os.path.join(ROOT_PATH, 'README.rst'), 'r').read(),
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     url=URL,
-    install_requires=[
-        'scipy>=1.3.0',
-    ],
     extras_require={
         'dev': [
             'pytest',
@@ -44,5 +42,5 @@ setup(
         'Programming Language :: Python :: 3.7',
     ],
     include_package_data=True,
-    python_requires=">=3.7",
+    python_requires=">=3.6",
     ext_modules=[libsvm])

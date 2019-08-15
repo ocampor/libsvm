@@ -1,0 +1,11 @@
+language: python
+os:
+  - linux
+  - osx
+python:
+  - "3.6"
+  - "3.7"
+install:
+  pip install -e .[dev]
+script:
+  - pytest

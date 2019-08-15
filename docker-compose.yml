@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+  libsvm:
+    image: ocampor/libsvm
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+  pytest:
+    image: ocampor/libsvm
+    command: pytest
+    volumes:
+      - ./tests:/src/tests
