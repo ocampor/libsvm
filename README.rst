@@ -1,5 +1,12 @@
-.. image:: https://travis-ci.com/ocampor/libsvm.svg?branch=master
-    :target: https://travis-ci.com/ocampor/libsvm
+.. -*- mode: rst -*-
+
+|Travis|_ |PyPi|_
+
+.. |Travis| image:: https://travis-ci.com/ocampor/libsvm.svg?branch=master
+.. _Travis: https://travis-ci.com/ocampor/libsvm
+
+.. |PyPi| image:: https://img.shields.io/pypi/dm/libsvm?color=blue   :alt: PyPI - Downloads
+.. _PyPi: https://pypi.org/project/libsvm/
 
 LibSVM
 ======
