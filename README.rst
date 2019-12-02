@@ -64,6 +64,25 @@ Example
    >>> p_label, p_acc, p_val = svm_predict(y[200:], x[200:], m)
    Accuracy = 84.2857% (59/70) (classification)
 
+Windows
+-------
+
+Cygwin
+______
+
+In case that you want to install this package using Cygwin, you have to make sure that the
+following packages are installed:
+
+1. gcc-g++ >= 7.0.0
+2. python38
+3. python38-devel
+4. python38-pip
+
+Some good tutorials to install Cygwin packages are the following:
+
+- https://wiki.usask.ca/display/MESH/Running+Python+from+the+Cygwin+Terminal
+- https://www.davidbaumgold.com/tutorials/set-up-python-windows/#installing-cygwin
+
 Copyright
 ---------
 
