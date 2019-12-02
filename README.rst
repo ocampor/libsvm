@@ -67,6 +67,9 @@ Example
 Windows
 -------
 
+The package contains a pre-built Windows binary that is only compatible with 64 bits architecture; therefore,
+32 bits architecture is not compatible.
+
 Cygwin
 ______
 

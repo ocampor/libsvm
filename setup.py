@@ -1,4 +1,5 @@
 import os
+import sys
 from distutils.core import setup
 from distutils.extension import Extension
 
@@ -16,9 +17,13 @@ VERSION = libsvm.__version__
 with open(os.path.join(ROOT_PATH, 'README.rst'), 'r') as readme:
     LONG_DESCRIPTION = readme.read()
 
-libsvm = Extension(
-    'libsvm',
-    sources=['src/libsvm/svm.cpp'])
+if sys.platform == 'win32':
+    EXT_MODULES = []
+else:
+    libsvm = Extension(
+        'libsvm',
+        sources=['src/libsvm/svm.cpp'])
+    EXT_MODULES = [libsvm]
 
 setup(
     name=DIST_NAME,
@@ -46,4 +51,4 @@ setup(
     ],
     include_package_data=True,
     python_requires=">=3.4",
-    ext_modules=[libsvm])
+    ext_modules=EXT_MODULES)
