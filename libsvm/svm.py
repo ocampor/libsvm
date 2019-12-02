@@ -26,11 +26,13 @@ pkg_path = path.join(dirname, pardir)
 file_name = list(filter(lambda x: 'libsvm.cpython' in x, listdir(pkg_path)))
 
 if len(file_name) == 1:
-    file_name = file_name[0]
+    file_path = path.join(pkg_path, file_name[0])
+elif sys.platform.lower() == 'win32':
+    file_path = path.join(dirname, 'bin', 'windows', 'libsvm.dll')
 else:
     raise Exception('LIBSVM library not found.')
 
-libsvm = CDLL(path.join(pkg_path, file_name))
+libsvm = CDLL(file_path)
 
 C_SVC = 0
 NU_SVC = 1
