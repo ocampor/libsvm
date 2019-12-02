@@ -24,14 +24,16 @@ __all__ = ['libsvm', 'svm_problem', 'svm_parameter',
 dirname = path.dirname(path.abspath(__file__))
 pkg_path = path.join(dirname, pardir)
 
-if len(file_name) == 1:
-    file_name = list(filter(lambda x: 'libsvm.cpython' in x, listdir(pkg_path)))
-elif sys.platform.lower() == 'win32':
+if sys.platform.lower() == 'win32':
     file_name = list(filter(lambda x: 'libsvm.dll' in x, listdir(pkg_path)))
+else:
+    file_name = list(filter(lambda x: 'libsvm.cpython' in x, listdir(pkg_path)))
+
+if len(file_name) == 1:
+    file_path = path.join(pkg_path, file_name[0])
 else:
     raise Exception('LIBSVM library not found.')
 
-file_path = path.join(pkg_path, file_name[0])
 libsvm = CDLL(file_path)
 
 C_SVC = 0
