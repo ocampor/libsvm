@@ -1,3 +1,3 @@
 include README.rst
 recursive-include src *
-recursive-include libsvm *.dll
+recursive-include bin *.dll
