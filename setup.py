@@ -14,7 +14,7 @@ AUTHOR = 'Ricardo Ocampo'
 URL = 'https://github.com/ocampor/libsvm'
 VERSION = libsvm.__version__
 
-with open(os.path.join(ROOT_PATH, 'README.rst'), 'r') as readme:
+with open(os.path.join(ROOT_PATH, 'README.rst'), 'r', encoding="utf-8") as readme:
     LONG_DESCRIPTION = readme.read()
 
 if sys.platform == 'win32':
@@ -50,5 +50,5 @@ setup(
         'Programming Language :: Python :: 3.7',
     ],
     include_package_data=True,
-    python_requires=">=3.4",
+    python_requires=">=3.5",
     ext_modules=EXT_MODULES)
