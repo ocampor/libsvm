@@ -1,5 +1,14 @@
 .. -*- mode: rst -*-
 
+
+.. warning::
+   This project is not maintained.
+
+   Official Python branch: https://github.com/cjlin1/libsvm/tree/master/python
+
+   Install using ``pip install -U libsvm-official``
+
+
 |Travis|_ |PyPi|_
 
 .. |Travis| image:: https://travis-ci.com/ocampor/libsvm.svg?branch=master
@@ -8,8 +17,8 @@
 .. |PyPi| image:: https://img.shields.io/pypi/dm/libsvm?color=blue   :alt: PyPI - Downloads
 .. _PyPi: https://pypi.org/project/libsvm/
 
-LibSVM
-======
+LibSVM (Unmaintained/ Archived) 
+=================================================================================================================================================================
 
 Description
 -----------
