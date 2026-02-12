@@ -124,11 +124,11 @@ def gen_svm_nodearray(xi, feature_max=None, isKernel=False):
                                                                 scipy.ndarray):  # for a sparse vector
         for idx, j in enumerate(index_range):
             ret[idx].index = j
-            ret[idx].value = (xi[1])[idx]
+            ret[idx].value = (xi[1])[idx].item()
     else:
         for idx, j in enumerate(index_range):
             ret[idx].index = j
-            ret[idx].value = xi[j - xi_shift]
+            ret[idx].value = xi[j - xi_shift].item()
 
     max_idx = 0
     if len(index_range) > 0:
